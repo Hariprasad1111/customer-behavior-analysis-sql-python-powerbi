@@ -55,14 +55,25 @@ This project simulates a real analyst workflow: take a raw, messy dataset, clean
 
 ## Setup / Reproducing This Project
 
-1. Clone the repo and install dependencies:pip install pandas sqlalchemy pymysql
+1. Clone the repo and install dependencies:
+
+```
+pip install pandas sqlalchemy pymysql
+```
+
 2. Set up a local MySQL database named `customer_behavior`.
+
 3. Set database credentials as environment variables (do not hardcode credentials):
+
+```
 export DB_USER=root
 export DB_PASSWORD=your_password
 export DB_HOST=localhost
 export DB_PORT=3306
 export DB_NAME=customer_behavior
+```
+
+
 4. Run `EDA.ipynb` to clean the data and load it into MySQL.
 5. Run the queries in `Customer_Behavior.sql` against the loaded table.
 6. Open `Customer_behavior.pbix` in Power BI Desktop to explore the dashboard.
@@ -70,5 +81,3 @@ export DB_NAME=customer_behavior
 ## Notes
 
 This project was built as part of my transition into a Data Analyst role, applying SQL and Python skills from my background in data migration and ETL (financial data reconciliation) to a full analytics workflow — from raw data to stakeholder-ready insights.
-If GitHub's web editor mangles the table formatting when you paste, just let me know and I'll give you a version without the markdown table, using plain bullet points instead.
-
